@@ -7,7 +7,7 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 })
 export class OuterComponent {
   @Input() dog;
-  @Output() dogNameFromOuter = new EventEmitter<string>();
+  @Output() dogNameFromOuter = new EventEmitter();
 
   dogNameFromInner(passed) {
   	this.dog = passed;
