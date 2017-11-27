@@ -13,6 +13,7 @@ export class InnerComponent {
    sendUpToOuter(e) {
   	e.preventDefault();
   	 this.dogNameFromInner.emit(e.target[0].value);
+  	 e.target.reset();
   }
   constructor() { }
 
