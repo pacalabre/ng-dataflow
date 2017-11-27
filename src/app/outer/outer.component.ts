@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'outer',
@@ -7,12 +7,14 @@ import { Component, Input } from '@angular/core';
 })
 export class OuterComponent {
   @Input() dog;
-  newDogName = "";
+  @Output() dogNameFromOuter = new EventEmitter<string>();
 
   dogNameFromInner(passed) {
   	this.dog = passed;
-  	console.log("stuff "+ this.dog);
+  	this.dogNameFromOuter.emit(this.dog);
   }
+
+
   constructor() { }
 
 

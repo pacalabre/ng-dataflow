@@ -1,4 +1,4 @@
 
 <h2>Dog: {{ dog }}</h2>
-<outer [dog] = "dog">
+<outer [dog] = "dog" (dogNameFromOuter)="dogNameFromOuter($event)">
 </outer>

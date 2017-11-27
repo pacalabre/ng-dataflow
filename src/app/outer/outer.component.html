@@ -1,6 +1,5 @@
 <section class="section-outer">
 	<h2>Outer</h2>
 	<p>Dog: {{ dog }}</p>
-	<p>From Inner: {{ newDogName }}</p>
 	<inner [dog]="dog" (dogNameFromInner)="dogNameFromInner($event)"></inner>
 </section>

@@ -9,11 +9,10 @@ export class InnerComponent {
 
   @Input() dog;
   @Output() dogNameFromInner = new EventEmitter<string>();
-  
+
    sendUpToOuter(e) {
   	e.preventDefault();
   	 this.dogNameFromInner.emit(e.target[0].value);
-  	 console.log(e.target[0].value);
   }
   constructor() { }
 
